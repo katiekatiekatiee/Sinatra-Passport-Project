@@ -1,19 +1,17 @@
 class UsersController < ApplicationController
 
-  # # GET: /users
-  # get "/users" do
-  #   erb :"/users/index.html"
-  # end
+  get "/signup" do
+    erb :"/users/signup.html"
+  end
 
-  # # GET: /users/new
-  # get "/users/new" do
-  #   erb :"/users/new.html"
-  # end
-
-  # # POST: /users
-  # post "/users" do
-  #   redirect "/users"
-  # end
+  post "/signup" do
+    user = User.new(params)
+    if user.save
+      session[:user_id] = user.id
+      redirect :"/countries"
+    end
+    redirect :"/signup"
+  end
 
   get "/users/:id" do
     erb :"/users/show.html"
