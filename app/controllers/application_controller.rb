@@ -26,6 +26,10 @@ class ApplicationController < Sinatra::Base
     redirect :"/signup"
   end
 
+  get "/login" do
+    erb :"users/login"
+  end
+
   post "/login" do 
     user = User.find_by(params[:email])
     if user && user.authenticate(params[:password])
@@ -34,6 +38,11 @@ class ApplicationController < Sinatra::Base
     else
       redirect "/login"
     end
+  end
+
+  post "/logout" do
+    session.clear
+    redirect "/countries"
   end
 
 end
