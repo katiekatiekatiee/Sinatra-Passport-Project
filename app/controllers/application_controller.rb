@@ -26,4 +26,14 @@ class ApplicationController < Sinatra::Base
     redirect :"/signup"
   end
 
+  post "/login" do 
+    user = User.find_by(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect "/countries"
+    else
+      redirect "/login"
+    end
+  end
+
 end
