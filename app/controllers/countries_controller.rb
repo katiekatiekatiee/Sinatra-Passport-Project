@@ -12,11 +12,14 @@ class CountriesController < ApplicationController
   end
 
   post "/countries" do
-    @country = Country.find_by(id: params[:id])
+    @country = Country.new(params)
+    @country.user_id = session[:user_id]
+    @country.save
     redirect "/countries"
   end
 
   get "/countries/:id" do
+    @country = Country.find_by(id: params[:id])
     erb :"/countries/show.html"
   end
 
