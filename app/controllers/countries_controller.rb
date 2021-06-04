@@ -6,7 +6,7 @@ class CountriesController < ApplicationController
     erb :"/countries/index.html"
   end
 
-  get "/countries/new" do
+  get "/countries/new" do 
     redirect_if_not_logged_in 
     @countries = Country.all
     erb :"/countries/new.html"
@@ -23,16 +23,21 @@ class CountriesController < ApplicationController
   get "/countries/:id" do
     redirect_if_not_logged_in 
     @country = Country.find_by(id: params[:id])
+    redirect_if_not_authenticated
     erb :"/countries/show.html"
   end
 
   get "/countries/:id/edit" do
     redirect_if_not_logged_in 
+    @country = Country.find_by(id: params[:id])
+    redirect_if_not_authenticated
     erb :"/countries/edit.html"
   end
 
   patch "/countries/:id" do
     redirect_if_not_logged_in 
+    
+    redirect_if_not_authenticated
     redirect "/countries/:id"
   end
 
@@ -41,9 +46,15 @@ class CountriesController < ApplicationController
   end
 
   private 
-    def redirect_if_not_logged_in
+    def redirect_if_not_authenticated #assure correct user editing/deleting
       if @country.user != current_user 
-        redirect '/countries'
+        redirect "/countries"
+      end
+    end
+
+    def redirect_if_not_logged_in #dont want people to see unless logged in 
+      if !logged_in?
+        redirect "/countries"
       end
     end
 end
