@@ -1,6 +1,8 @@
 class CountriesController < ApplicationController
 
   get "/countries" do
+    @countries = Country.all
+    binding.pry
     erb :"/countries/index.html"
   end
 

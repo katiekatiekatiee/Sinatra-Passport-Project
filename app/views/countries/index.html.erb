@@ -1,1 +1,6 @@
-<h1>This is the Model's index page.</h1>
+<h1>All Countries Logged</h1>
+<ul>
+<% @countries.each do |country| %>
+<li><a href= "/countries/<%=country.id%>"><%= country.name %></a></li>
+<% end %>
+</ul>
