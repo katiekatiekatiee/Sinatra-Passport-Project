@@ -36,9 +36,10 @@ class CountriesController < ApplicationController
 
   patch "/countries/:id" do
     redirect_if_not_logged_in 
-    
+    @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
-    redirect "/countries/:id"
+    @country.update(params["country"])
+    redirect "/countries/#{@country.id}"
   end
 
   delete "/countries/:id/delete" do
