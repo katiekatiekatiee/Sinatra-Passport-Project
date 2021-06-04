@@ -2,15 +2,17 @@ class CountriesController < ApplicationController
 
   get "/countries" do
     @countries = Country.all
-    binding.pry
+    #binding.pry
     erb :"/countries/index.html"
   end
 
   get "/countries/new" do
+    @countries = Country.all
     erb :"/countries/new.html"
   end
 
   post "/countries" do
+    @country = Country.find_by(id: params[:id])
     redirect "/countries"
   end
 
