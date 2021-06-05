@@ -34,15 +34,15 @@ class CountriesController < ApplicationController
     erb :"/countries/edit.html"
   end
 
-  patch "/countries/:id" do
+  patch "/countries/:id" do #NOT WORKING
     redirect_if_not_logged_in 
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
     @country.update(params["country"])
-    redirect "/countries/#{@country.id}"
+    redirect "/countries"
   end
 
-  delete "/countries/:id" do
+  delete "/countries/:id" do #NOT WORKING
     redirect_if_not_logged_in
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
@@ -51,13 +51,13 @@ class CountriesController < ApplicationController
   end
 
   private 
-    def redirect_if_not_authenticated #assure correct user editing/deleting
+    def redirect_if_not_authenticated 
       if @country.user != current_user 
         redirect "/countries"
       end
     end
 
-    def redirect_if_not_logged_in #dont want people to see unless logged in 
+    def redirect_if_not_logged_in 
       if !logged_in?
         redirect "/countries"
       end
