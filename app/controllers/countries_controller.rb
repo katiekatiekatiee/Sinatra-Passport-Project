@@ -42,7 +42,7 @@ class CountriesController < ApplicationController
     redirect "/countries/#{@country.id}"
   end
 
-  delete "/countries/:id/delete" do
+  delete "/countries/:id" do
     redirect_if_not_logged_in
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
