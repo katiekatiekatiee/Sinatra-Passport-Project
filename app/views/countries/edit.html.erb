@@ -1,1 +1,8 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
+<h1>Edit Your Entry Here</h1>
+<h2><%= @country.name %></h2>
+<form method= "post" action= "/countries/<%= @country.id %>">
+<input type= "hidden" name= "_method" value= "patch">
+<p>Country Name: <input type= "text" name= "country[name]" value= "<%= @country.name%>"></p>
+<p>Description: <input type= "text" name= "country[description]" value= "<%= @country.description%>"></p>
+<input type= "submit" value= "Update Entry" id= "submit">
+</form>
