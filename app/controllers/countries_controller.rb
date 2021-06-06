@@ -38,11 +38,15 @@ class CountriesController < ApplicationController
     redirect_if_not_logged_in 
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
-    @country.update(params["country"])
-    redirect "/countries"
+    # @country.update(params["country"])
+    @country.name = params[:name]
+    @country.description = params[:description]
+    @country.save
+    #binding.pry ##not hitting this pry
+    redirect "/countries/#{@country.id}"
   end
 
-  delete "/countries/:id" do #NOT WORKING
+  delete "/countries/:id" do #NOT WORKING - just like with patch, form loads then cant redirect
     redirect_if_not_logged_in
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
