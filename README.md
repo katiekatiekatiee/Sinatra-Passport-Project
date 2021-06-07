@@ -10,7 +10,9 @@ Navigate into the file in the terminal and open it.
 And then execute:
 
     $ bundle install
+
 Then enter the following into the terminal and view in your browser:
+
     $ shotgun
 
 
