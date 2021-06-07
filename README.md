@@ -34,4 +34,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## Code of Conduct
 
-Everyone interacting in the PhaseOneCliProject project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/Sinatra-Passport-Project/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Sinatra-Passport-Project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/Sinatra-Passport-Project/blob/master/CODE_OF_CONDUCT.md).
