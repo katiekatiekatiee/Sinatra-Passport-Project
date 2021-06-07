@@ -2,7 +2,6 @@ class CountriesController < ApplicationController
 
   get "/countries" do
     @countries = Country.all
-    #binding.pry
     erb :"/countries/index.html"
   end
 
@@ -34,19 +33,16 @@ class CountriesController < ApplicationController
     erb :"/countries/edit.html"
   end
 
-  patch "/countries/:id" do #NOT WORKING
+  patch "/countries/:id" do 
     redirect_if_not_logged_in 
     @country = Country.find_by(id: params[:id])
-    redirect_if_not_authenticated
-    # @country.update(params["country"])
-    @country.name = params[:name]
-    @country.description = params[:description]
-    @country.save
-    #binding.pry ##not hitting this pry
+    redirect_if_not_authenticated 
+    @country.update(params["country"])
     redirect "/countries/#{@country.id}"
+
   end
 
-  delete "/countries/:id" do #NOT WORKING - just like with patch, form loads then cant redirect
+  delete "/countries/:id" do 
     redirect_if_not_logged_in
     @country = Country.find_by(id: params[:id])
     redirect_if_not_authenticated
