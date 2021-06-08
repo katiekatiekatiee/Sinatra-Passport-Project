@@ -1,6 +1,7 @@
 class CountriesController < ApplicationController
 
   get "/countries" do
+    redirect_if_not_logged_in 
     @countries = Country.all
     erb :"/countries/index.html"
   end
@@ -22,7 +23,6 @@ class CountriesController < ApplicationController
   get "/countries/:id" do
     redirect_if_not_logged_in 
     @country = Country.find_by(id: params[:id])
-    #redirect_if_not_authenticated
     erb :"/countries/show.html"
   end
 
@@ -59,7 +59,7 @@ class CountriesController < ApplicationController
 
     def redirect_if_not_logged_in 
       if !logged_in?
-        redirect "/countries"
+        redirect "/"
       end
     end
 end

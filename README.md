@@ -22,7 +22,7 @@ Upon opening the file in a text editor, run "bundle install" to ensure the appli
 
 From there, you will be directed first to the Home Page. Here, create an account if you do not have one by clicking the link to do so, or login with your email and password. 
 
-Once logged in, you can choose from a variety of options. A user can view all countries entered into the database. However, the descriptions entered by other users will not be visible unless they belong to the logged-in user. You can also edit or delete any of your own entries by clicking the appropriate links/buttons. To create a new entry, click the link "Create Entry" and enter the desired information, submit the form, and see your addition to the list of entries!
+Once logged in, you can choose from a variety of options. A user can view all countries entered into the database, along with the description attached. However, you can only edit or delete any of your own entries. This is done by clicking the appropriate links/buttons. To create a new entry, click the link "Create Entry" and enter the desired information, submit the form, and see your addition to the list of entries!
 
 To log out of the application, simply click the "log out" button in the navigation bar featured on every page. 
 
