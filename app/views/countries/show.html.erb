@@ -1,6 +1,6 @@
 <h1><%= @country.name%></h1>
 <p>Description: <%= @country.description %></p>
-<% redirect_if_not_authenticated %>
+<%# <% redirect_if_not_authenticated %> 
 <a href= "/countries/<%= @country.id %>/edit">Edit</a>
 <form method="POST" action="/countries/<%=@country.id%>">
 <input type="hidden" name="_method" value="DELETE">
