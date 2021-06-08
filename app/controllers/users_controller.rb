@@ -1,20 +1,20 @@
 class UsersController < ApplicationController
 
-  get "/users/:id" do
-    erb :"/users/show.html"
-  end
+  # get "/users/:id" do
+  #   erb :"/users/show.html"
+  # end
 
-  get "/users/:id/edit" do
-    erb :"/users/edit.html"
-  end
+  # get "/users/:id/edit" do
+  #   erb :"/users/edit.html"
+  # end
 
-  patch "/users/:id" do
-    redirect "/users/:id"
-  end
+  # patch "/users/:id" do
+  #   redirect "/users/:id"
+  # end
 
-  delete "/users/:id/delete" do
-    redirect "/users"
-  end
+  # delete "/users/:id/delete" do
+  #   redirect "/users"
+  # end
 
   get "/signup" do
     erb :"/users/signup.html"
