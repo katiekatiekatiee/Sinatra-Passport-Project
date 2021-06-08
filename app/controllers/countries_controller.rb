@@ -65,4 +65,3 @@ class CountriesController < ApplicationController
 end
 
 
-xxxxxxx
