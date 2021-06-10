@@ -51,7 +51,7 @@
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #dbe6fd;
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
@@ -71,20 +71,7 @@
   }
 
   .content {
-    float: left;
-    width: 60%; /* 480px / 800px */
-  }
-
-  .sidebar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-  }
-
-  .sidebar ul {
-    font-size: 14px;
+    text-align: center;
   }
 
   .branding {
@@ -106,16 +93,9 @@
     width: auto;
   }
 
-  .content, .sidebar {
+  .content {
     float: none;
     width: 100%;
-  }
-
-  .sidebar {
-    background: transparent;
-    border: none;
-    border-top: 2px solid #ccc;
-    padding: 0;
   }
 
   h1 {
