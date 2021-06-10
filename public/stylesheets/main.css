@@ -50,6 +50,16 @@
     color: #293b5f;
   }
 
+  button {
+    color: black;
+    background-color: #dbe6fd;
+    text-align: center;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 2px solid #b2ab8c;
+  }
+
   h2 {
     border-bottom: 2px solid #dbe6fd;
     font-size: 24px;
@@ -79,8 +89,8 @@
   }
 
   footer.branding {
-    border-top: 2px solid #ccc;
     margin-top: 20px;
+    text-align: center;
     padding-top: 20px;
   }
 }
