@@ -20,9 +20,9 @@ Then enter the following into the terminal and view in your browser:
 
 Upon opening the file in a text editor, run "bundle install" to ensure the application's gem dependencies are met. Then, enter "shotgun" into the terminal to open a server and be able to view the application in your browser as "localhost."
 
-From there, you will be directed first to the Home Page. Here, create an account if you do not have one by clicking the link to do so, or login with your email and password. 
+From there, you will be directed first to the Home Page. Here, create an account if you do not have one by clicking the link to do so, or log in with your email and password. 
 
-Once logged in, you can choose from a variety of options. A user can view all countries entered into the database, along with the description attached. However, you can only edit or delete any of your own entries. This is done by clicking the appropriate links/buttons. To create a new entry, click the link "Create Entry" and enter the desired information, submit the form, and see your addition to the list of entries!
+Once logged in, you can choose from a variety of options. A user can view all countries entered into the database, but the user can only view the descriptions and other post attributes if that post belonds to. Also, a user can only edit or delete any of their own entries. This is done by clicking the appropriate links/buttons. To create a new entry, click the link "Create Entry" and enter the desired information, submit the form, and see your addition to the list of entries!
 
 To log out of the application, simply click the "log out" button in the navigation bar featured on every page. 
 
