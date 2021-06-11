@@ -22,21 +22,21 @@ class CountriesController < ApplicationController
 
   get "/countries/:id" do
     redirect_if_not_logged_in 
-    @country = Country.find_by(id: params[:id])
+    @country = Country.find(params[:id])
     redirect_if_not_authenticated
     erb :"/countries/show.html"
   end
 
   get "/countries/:id/edit" do
     redirect_if_not_logged_in 
-    @country = Country.find_by(id: params[:id])
+    @country = Country.find(params[:id])
     redirect_if_not_authenticated
     erb :"/countries/edit.html"
   end
 
   patch "/countries/:id" do 
     redirect_if_not_logged_in 
-    @country = Country.find_by(id: params[:id])
+    @country = Country.find(params[:id])
     redirect_if_not_authenticated 
     @country.update(params["country"])
     redirect "/countries/#{@country.id}"
@@ -45,7 +45,7 @@ class CountriesController < ApplicationController
 
   delete "/countries/:id" do 
     redirect_if_not_logged_in
-    @country = Country.find_by(id: params[:id])
+    @country = Country.find(params[:id])
     redirect_if_not_authenticated
     @country.destroy
     redirect "/countries"
