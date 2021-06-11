@@ -1,6 +1,6 @@
 # Sinatra Passport
 
-Welcome to your Virtual Passport! Here, you can create an account with your unique email address and a secure password that will allow you to access not only the passport entries you have created, but also the full list of countries that have been visited by all of the users in our database! Each entry you create is accompanied by a text description of any highlights or memories you want to document. This way, all of these memories and a log of the places you've travelled can be kept in the same safe space. You can only edit and delete entries you have created and, of course, ultimately log out when you are finished. 
+Welcome to your Virtual Passport! Here, you can create an account with your unique email address and a secure password that will allow you to access not only the passport entries you have created, but also the full list of countries that have been visited by all of the users in our database! Each entry you create is accompanied by a text description of any highlights or memories you want to document, the dates of the trip, and any spots you'd say are a "must-see," or places you don't think anyone should miss. This way, all of these memories and a log of the places you've travelled can be kept in the same safe space. You can only edit and delete entries you have created and, of course, ultimately log out when you are finished. 
 
 ## Installation
 
