@@ -23,7 +23,6 @@ class CountriesController < ApplicationController
   get "/countries/:id" do
     redirect_if_not_logged_in 
     @country = Country.find(params[:id])
-    redirect_if_not_authenticated
     erb :"/countries/show.html"
   end
 
