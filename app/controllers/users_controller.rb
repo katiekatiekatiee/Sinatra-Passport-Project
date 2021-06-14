@@ -30,5 +30,12 @@ class UsersController < ApplicationController
     session.clear
     redirect "/countries"
   end
+
+  get "/users/:id" do
+    #binding.pry
+    @user = User.find(params[:id])
+    #binding.pry
+    erb :"/users/show.html"
+  end
   
 end

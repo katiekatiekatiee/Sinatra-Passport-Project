@@ -21,6 +21,7 @@
        
       <% if logged_in? %>
         <li><a href= "/countries">All Countries</a></li>
+        <li><a href= "/users/<%= current_user.id %>">Profile</a></li>
         <li><a href= "/countries/new">New Entry</a></li>
         <li> <form method="POST" action="/logout">
         <input type="submit" value="Log Out">

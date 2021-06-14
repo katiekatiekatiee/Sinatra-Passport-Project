@@ -1,0 +1,9 @@
+<h1>Hello, <%=@user.name.capitalize %>!</h1>
+
+<h3>Your Passport Entries:</h3>
+
+<ul>
+    <% @user.countries.each do |country| %>
+        <li><a href= "/countries/<%=country.id%>"><%= country.name %></a></li>
+        <% end %>
+</ul>
