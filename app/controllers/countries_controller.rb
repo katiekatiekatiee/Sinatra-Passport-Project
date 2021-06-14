@@ -14,9 +14,9 @@ class CountriesController < ApplicationController
 
   post "/countries" do
     redirect_if_not_logged_in 
-    @country = Country.new(params)
-    @country.user_id = session[:user_id]
-    @country.save
+      @country = Country.new(params)
+      @country.user_id = session[:user_id]
+      @country.save
     redirect "/countries"
   end
 
@@ -39,7 +39,6 @@ class CountriesController < ApplicationController
     redirect_if_not_authenticated 
     @country.update(params["country"])
     redirect "/countries/#{@country.id}"
-
   end
 
   delete "/countries/:id" do 
