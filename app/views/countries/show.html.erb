@@ -3,8 +3,11 @@
 <p>Date of Trip: <%= @country.date_of_trip %></p>
 <p>Must-See Spots: <%= @country.must_see %></p>
 
+
+<% if current_user.id == @country.user_id %>
 <a href= "/countries/<%= @country.id %>/edit">Edit</a>
 <form method="POST" action="/countries/<%=@country.id%>">
 <input type="hidden" name="_method" value="DELETE">
 <input type="submit" value="Delete Entry">
 </form>
+<% end %>

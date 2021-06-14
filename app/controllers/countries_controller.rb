@@ -16,8 +16,11 @@ class CountriesController < ApplicationController
     redirect_if_not_logged_in 
       @country = Country.new(params)
       @country.user_id = session[:user_id]
+      if !@country.save
+        redirect "/countries/new"
+      end
       @country.save
-    redirect "/countries"
+      redirect "/countries"
   end
 
   get "/countries/:id" do
