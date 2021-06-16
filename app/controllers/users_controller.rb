@@ -32,8 +32,15 @@ class UsersController < ApplicationController
   end
 
   get "/users/:id" do
+    redirect_if_not_logged_in 
     @user = User.find(params[:id])
     erb :"/users/show.html"
   end
   
+  private
+    def redirect_if_not_logged_in 
+       if !logged_in?
+         redirect "/"
+      end
+    end
 end
